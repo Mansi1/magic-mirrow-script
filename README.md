@@ -12,3 +12,9 @@ Given the hardware constraints of the Zero 2 W (512MB RAM), this project is opti
 - **OS:** Raspberry Pi OS Lite (32-bit)
 - **Node.js Version:** 18.x (Recommended for stability)
 - **Mode:** Server-only with a lightweight X-server for display.
+
+make script runnable execute this command
+
+```bash
+chmod +x setup_mirror.sh
+```
