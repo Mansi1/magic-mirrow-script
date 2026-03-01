@@ -1,13 +1,15 @@
 #!/bin/bash
 
 echo "--- Step 1: Boosting RAM (Swap) for the Zero 2 W ---"
+sudo apt update
+sudo apt install dphys-swapfile -y
 sudo dphys-swapfile swapoff
 sudo sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=2048/' /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
 echo "--- Step 2: Updating System ---"
-sudo apt update && sudo apt upgrade -y
+sudo apt upgrade -y
 
 echo "--- Step 3: Installing MagicMirror (The Smart Way) ---"
 # Using the community installer for Node/Electron management
